@@ -10,13 +10,13 @@ In general route tables are stored in PATRICIA trie. A PATRICIA trie is a specia
 We extract various features from the PATRICIA trie 
 In below figure, trie depth is 3, number of nodes are 15 and leaf nodes are 8. Leaf nodes also represent the number of most preferred routes (longest prefix routes).
 We can consider the mentioned value as property of given PATRICIA trie. With these 3 properties with different number of routes if we plot the clusters using clustering algorithm, we get different cluster of routes. Solution can monitor the number of clusters formed over the period of time based on changes in PATRICIA trie property. If clusters remain constant, this indicates smooth routing functions. But if clusters are added or deleted at particular timestamp, it is worth of raising alert.
-![alt text](images/pat_trie.png)
+![alt text](https://github.com/ankitsinha/Rouing-Anomaly-Classification/blob/main/images/pat_trie.png)
 Once clusters are made new routes or route updates can be classified into one of those clusters too. If routes are not classified within available cluster or it deteriorate the clusters, it is worth alerting.
 We are using Supervised Machine learning method where we extract some properties from well know, industry standard data available from routing table and apply clustering techniques to find the anomaly. Supervised Machine learning gives advantage over other tradition engineering methods in terms of response time and detection performance. This also provides generic and scalable method as internet routes are increasing day by day.
 
 Below clusters are created using KMeans clustering method using given properties. Once we add some more routes which doesn’t fall into existing cluster and forms new cluster (look at cyan colored cluster). This is indication that some routes have been added which has not been in seen in the routing table earlier.
-![alt text](images/route_cluster1.png)
-![alt text](images/route_cluster2.png)
+![alt text](https://github.com/ankitsinha/Rouing-Anomaly-Classification/blob/main/images/route_cluster1.png)
+![alt text](https://github.com/ankitsinha/Rouing-Anomaly-Classification/blob/main/images/route_cluster2.png)
 
 
 ## Code

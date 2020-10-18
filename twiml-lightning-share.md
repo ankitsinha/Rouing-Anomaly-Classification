@@ -25,8 +25,8 @@ We extract various features from the PATRICIA trie. Some properties as trie dept
 
 - Below clusters are created using KMeans clustering method using given properties.
 - Once we add some more routes which doesn’t fall into existing cluster and forms new cluster (look at cyan colored cluster). This is indication that some routes have been added which has not been in seen in the routing table earlier.
-![alt text](images/route_cluster1.png)
-![alt text](images/route_cluster2.png)
+![alt text](https://github.com/ankitsinha/Rouing-Anomaly-Classification/blob/main/images/route_cluster1.png)
+![alt text](https://github.com/ankitsinha/Rouing-Anomaly-Classification/blob/main/images/route_cluster2.png)
 
 ## Python libraries used
 
