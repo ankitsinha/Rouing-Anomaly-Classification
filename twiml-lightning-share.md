@@ -2,9 +2,9 @@
 
 ## Presenter
 
-Ankit Sinha, Hewlett Packard Enterprise / Indepedent Reseach
-Github: https://github.com/ankitsinha/Rouing-Anomaly-Classification
-LinkedIn: https://www.linkedin.com/in/ankit-kumar-sinha-34484b28/
+Ankit Sinha, Hewlett Packard Enterprise / Indepedent Reseach  
+Github: https://github.com/ankitsinha/Rouing-Anomaly-Classification  
+LinkedIn: https://www.linkedin.com/in/ankit-kumar-sinha-34484b28/  
 
 
 ## Context
@@ -16,6 +16,8 @@ Networking is important aspect of any enterprise, be is mission critical applica
 
 We extract properties of PATRICIA trie which is used to build routing table and use it for clustering the routes to detect anomolous changes to routing table. A PATRICIA trie is a special variant of the radix 2 (binary) trie, in which rather than explicitly store every bit of every key, the nodes store only the position of the first bit which differentiates two sub-trees.
 We extract various features from the PATRICIA trie. Some properties as trie depth, number of leaf nodes and total number of nodes. With these 3 properties with different number of routes if we plot the clusters using clustering algorithm, we get different cluster of routes. We can monitor the number of clusters formed over the period of time based on changes in PATRICIA trie property. If clusters remain constant, this indicates smooth routing functions. But if clusters are added or deleted at particular timestamp, it is worth of raising alert.
+
+More detailed: [Routing-Anomaly-Detection](Routing-Anomaly-Detection.md)
 
 ## Code
 
