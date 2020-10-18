@@ -9,7 +9,7 @@ Networking is important aspect of any enterprise, be is mission critical applica
 In general route tables are stored in PATRICIA trie. A PATRICIA trie is a special variant of the radix 2 (binary) trie, in which rather than explicitly store every bit of every key, the nodes store only the position of the first bit which differentiates two sub-trees.
 We extract various features from the PATRICIA trie 
 In below figure, trie depth is 3, number of nodes are 15 and leaf nodes are 8. Leaf nodes also represent the number of most preferred routes (longest prefix routes).
-We can consider the mentioned value as property of given PATRICIA trie. With these 3 properties with different number of routes if we plot the clusters using clustering algorithm, we get different cluster of routes. Solution can monitor the number of clusters formed over the period of time based on changes in PATRICIA trie property. If clusters remain constant, this indicates smooth routing functions. But if clusters are added or deleted at particular timestamp, it is worth of raising alert.
+We can consider the mentioned value as property of given PATRICIA trie. With these 3 properties with different number of routes if we plot the clusters using clustering algorithm, we get different cluster of routes. For this we have used KMeans and Elbow method for find optimal value of k (numbers of clusters). Solution can monitor the number of clusters formed over the period of time based on changes in PATRICIA trie property. If clusters remain constant, this indicates smooth routing functions. But if clusters are added or deleted at particular timestamp, it is worth of raising alert.
 ![alt text](https://github.com/ankitsinha/Rouing-Anomaly-Classification/blob/main/images/pat_trie.png)
 Once clusters are made new routes or route updates can be classified into one of those clusters too. If routes are not classified within available cluster or it deteriorate the clusters, it is worth alerting.
 We are using Supervised Machine learning method where we extract some properties from well know, industry standard data available from routing table and apply clustering techniques to find the anomaly. Supervised Machine learning gives advantage over other tradition engineering methods in terms of response time and detection performance. This also provides generic and scalable method as internet routes are increasing day by day.
@@ -22,6 +22,11 @@ Below clusters are created using KMeans clustering method using given properties
 ## Code
 
 [routing-anomaly](src/routing-anomaly-kmean.py)
+
+## Future work
+
+- Find distance between centriods of clusters
+- Figure out false/positives based on distance between centriods and living time of change
 
 ## References
 
